@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Editor from "@monaco-editor/react";
+import "./App.css"
+import Input from './components/Input';
+import Output from './components/Output';
 
-function App() {
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Row, Col } from "react-bootstrap";
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+    <div>
+      <Row>
+        <Col><Editor
+          width="70vw"
+          height="100vh"
+          defaultLanguage="html"
+          defaultValue="#include <iostream>"
+          theme="vs-dark"
+        /></Col>
 
-export default App;
+        <Col>
+          <Row>
+            <Input />
+          </Row>
+          <Row>
+            <Output />
+          </Row>
+        </Col>
+      </Row>
+    </div>
+  )
+}
