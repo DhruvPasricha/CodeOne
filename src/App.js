@@ -14,8 +14,8 @@ export default function App() {
         <Col><Editor
           width="70vw"
           height="100vh"
-          defaultLanguage="html"
-          defaultValue="#include <iostream>"
+          defaultLanguage="C++"
+          defaultValue="//write code here"
           theme="vs-dark"
         /></Col>
 
