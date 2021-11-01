@@ -3,6 +3,8 @@ import Editor from '@monaco-editor/react'
 import { Col, Row } from 'react-bootstrap'
 import Input from './Input'
 import Output from './Output'
+import 'monaco-editor/esm/vs/basic-languages/cpp/cpp'
+import 'monaco-editor/esm/vs/basic-languages/cpp/cpp.contribution'
 
 const Playground = () => {
   return (
@@ -12,8 +14,13 @@ const Playground = () => {
           <Editor
             width='70vw'
             height='100vh'
-            defaultLanguage='C++'
-            defaultValue='//write code here'
+            defaultLanguage='cpp'
+            defaultValue='#include <iostream>
+            using namespace std;
+            
+            int main(){
+              return 0;
+          }'
             theme='vs-dark'
           />
         </Col>
