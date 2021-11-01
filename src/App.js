@@ -1,33 +1,14 @@
 import React from 'react'
-import Editor from "@monaco-editor/react";
-import "./App.css"
-import Input from './components/Input';
-import Output from './components/Output';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { Row, Col } from "react-bootstrap";
+import './App.css'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import Playground from './components/Playground'
+import NavbarComp from './components/Navbar'
 
 export default function App() {
   return (
     <div>
-      <Row>
-        <Col><Editor
-          width="70vw"
-          height="100vh"
-          defaultLanguage="C++"
-          defaultValue="//write code here"
-          theme="vs-dark"
-        /></Col>
-
-        <Col>
-          <Row>
-            <Input />
-          </Row>
-          <Row>
-            <Output />
-          </Row>
-        </Col>
-      </Row>
+      <NavbarComp />
+      <Playground />
     </div>
   )
 }
