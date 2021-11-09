@@ -1,7 +1,6 @@
 body {
   overflow: hidden;
   padding: 0px;
-  /* margin-top: 2vh !important; */
 }
 
 textarea {
@@ -68,3 +67,6 @@ textarea {
   transition: 0.5s ease;
 }
 
+.editor {
+  zoom: 120%;
+}
