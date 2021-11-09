@@ -6,16 +6,18 @@ import Output from "./Output";
 import "monaco-editor/esm/vs/basic-languages/cpp/cpp";
 import "monaco-editor/esm/vs/basic-languages/cpp/cpp.contribution";
 
-const Playground = () => {
+const Playground = ({currentLang}) => {
   return (
     <div>
       <Row>
         <Col>
           <Editor
+            width='70vw'
+            height='100vh'
             className="editor"
             width="70vw"
             height="100vh"
-            defaultLanguage="cpp"
+            defaultLanguage={currentLang}
             defaultValue="#include <iostream>
             using namespace std;
             
