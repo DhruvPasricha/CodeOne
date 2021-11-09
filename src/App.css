@@ -1,7 +1,6 @@
 body {
   overflow: hidden;
   padding: 0px;
-  /* margin-top: 2vh !important; */
 }
 
 textarea {
@@ -66,4 +65,8 @@ textarea {
 #language:hover {
   color: red;
   transition: 0.5s ease;
+}
+
+.editor {
+  zoom: 120%;
 }
