@@ -9,7 +9,7 @@ class Language {
 
 let cpp = new Language(
   "C++",
-  ".cpp",
+  "cpp",
   "cpp",
   `#include<iostream>
 using namespace std;
@@ -20,11 +20,11 @@ int main(){
 }`
 );
 
-let python = new Language("Python", ".py", "python", `print("Hello World")`);
+let python = new Language("Python", "py", "python", `print("Hello World")`);
 
 let java = new Language(
   "Java",
-  ".java",
+  "java",
   "java",
   `public class Main {
       
@@ -37,21 +37,21 @@ let java = new Language(
 
 let ruby = new Language(
   "Ruby",
-  ".rb",
+  "rb",
   "ruby",
   `puts "Hello World"`
 );
 
 let swift = new Language(
   "Swift",
-  ".swift",
+  "swift",
   "swift",
   `print("Hello, World!") `
 );
 
 let kotlin = new Language(
   "Kotlin",
-  ".kt",
+  "kt",
   "kotlin",
   `fun main(args: Array<String>) {
     println("Hello, World!")
