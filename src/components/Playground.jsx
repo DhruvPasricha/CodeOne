@@ -29,7 +29,7 @@ const Playground = (prop) => {
             <Input inputHandler={prop.handleInput} />
           </Row>
           <Row>
-            <Output />
+            <Output out={prop.output} />
           </Row>
         </Col>
       </Row>

@@ -19,6 +19,11 @@ textarea {
   padding: 0px !important;
 }
 
+.output {
+  color: white;
+  padding: 15px;
+}
+
 .outputComponent {
   padding: 0px !important;
   margin: 0px;
