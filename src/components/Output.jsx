@@ -4,7 +4,7 @@ export default function Output(props) {
   return (
     <div className='outputComponent'>
       <div className='heading'>Output</div>
-      <div className='output'>{props.out}</div>
+      <pre className='output'>{props.out}</pre>
     </div>
   )
 }

@@ -18,6 +18,7 @@ export default function App() {
   const [value, setValue] = useState(currentLang.sampleCode)
   const [inputData, setInputData] = useState('')
   const [outputData, setOutputData] = useState('')
+  const [running, setRunning] = useState(false)
 
   function handleChange(v, e) {
     setValue(v)
@@ -40,6 +41,7 @@ export default function App() {
   }
 
   const getOutput = async () => {
+    setRunning(true)
     console.log(value)
     console.log(inputData)
 
@@ -60,6 +62,7 @@ export default function App() {
 
     axios(config)
       .then(function (response) {
+        setRunning(false)
         setOutputData(response.data.output)
         console.log(response.data.output)
       })
@@ -75,6 +78,7 @@ export default function App() {
         currentLang={currentLang}
         key={currentLang.code}
         execute={getOutput}
+        loading={running}
       />
       <Playground
         currentLang={currentLang}

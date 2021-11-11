@@ -41,7 +41,7 @@ const NavbarComp = (props) => {
           className='justify-content-end'
           onClick={props.execute}
         >
-          <FontAwesomeIcon icon={faPlay} size='sm' /> Run
+          <FontAwesomeIcon icon={faPlay} size='sm' spin={props.loading} /> Run
         </div>
       </div>
     </div>
