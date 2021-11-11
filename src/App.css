@@ -9,12 +9,12 @@ textarea {
   background-color: #1e1e1e;
   color: white;
   resize: none !important;
+  padding: 10px !important;
 }
 
-.input,
-.output {
-  width: 100%;
-  height: 47vh;
+.input, .output {
+  width: 94.5% !important;
+  height: 42.5vh;
   background-color: #1e1e1e !important;
   padding: 0px !important;
 }
@@ -22,6 +22,8 @@ textarea {
 .output {
   color: white;
   padding: 10px !important;
+  white-space: pre-wrap !important;
+  overflow: scroll;
 }
 
 .outputComponent {
@@ -45,6 +47,7 @@ textarea {
   font-size: 17pt;
   font-weight: bold;
 }
+
 #name:hover {
   color: red;
   transition: 0.5s ease;
@@ -59,6 +62,7 @@ textarea {
   zoom: 120%;
   cursor: pointer;
 }
+
 #runButton:hover {
   background-color: crimson;
   transition: 0.5s ease;
@@ -68,6 +72,7 @@ textarea {
   color: white;
   font-weight: bold;
 }
+
 #language:hover {
   color: red;
   transition: 0.5s ease;

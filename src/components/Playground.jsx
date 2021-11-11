@@ -5,10 +5,6 @@ import Input from './Input'
 import Output from './Output'
 
 const Playground = (prop) => {
-  // useEffect(() => {
-  //   getOutput()
-  // })
-
   return (
     <div>
       <Row>

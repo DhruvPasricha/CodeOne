@@ -41,6 +41,7 @@ export default function App() {
   }
 
   const getOutput = async () => {
+    setOutputData('')
     setRunning(true)
     console.log(value)
     console.log(inputData)
@@ -67,7 +68,9 @@ export default function App() {
         console.log(response.data.output)
       })
       .catch(function (error) {
+        setRunning(false)
         console.log(error)
+        setOutputData(error)
       })
   }
 

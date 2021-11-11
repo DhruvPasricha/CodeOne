@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, NavDropdown } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faCode } from '@fortawesome/free-solid-svg-icons'
+import { faPlayCircle, faCode } from '@fortawesome/free-solid-svg-icons'
 import { languages } from './Languages'
 
 const NavbarComp = (props) => {
@@ -41,7 +41,8 @@ const NavbarComp = (props) => {
           className='justify-content-end'
           onClick={props.execute}
         >
-          <FontAwesomeIcon icon={faPlay} size='sm' spin={props.loading} /> Run
+          <FontAwesomeIcon icon={faPlayCircle} size='1x' spin={props.loading} />{' '}
+          {!props.loading ? 'Run' : ''}
         </div>
       </div>
     </div>
