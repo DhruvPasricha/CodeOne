@@ -52,6 +52,7 @@ textarea {
   font-weight: bold;
   border-radius: 40px;
   zoom: 120%;
+  cursor: pointer;
 }
 #runButton:hover {
   background-color: crimson;

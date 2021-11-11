@@ -36,6 +36,7 @@ export default function App() {
       index--
     }
     languages[index] = temp
+    setValue(newLang.sampleCode)
   }
 
   const getOutput = async () => {
