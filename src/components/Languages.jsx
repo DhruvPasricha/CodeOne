@@ -35,19 +35,9 @@ let java = new Language(
 }`
 );
 
-let ruby = new Language(
-  "Ruby",
-  "rb",
-  "ruby",
-  `puts "Hello World"`
-);
+let ruby = new Language("Ruby", "rb", "ruby", `puts "Hello World"`);
 
-let swift = new Language(
-  "Swift",
-  "swift",
-  "swift",
-  `print("Hello, World!") `
-);
+let swift = new Language("Swift", "swift", "swift", `print("Hello, World!") `);
 
 let kotlin = new Language(
   "Kotlin",

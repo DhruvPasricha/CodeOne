@@ -15,6 +15,7 @@ export default function Input(props) {
         rows='10'
         cols='10'
         placeholder='Enter Input'
+        id = "inputTextArea"
       ></textarea>
     </div>
   )
