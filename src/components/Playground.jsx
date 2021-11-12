@@ -1,26 +1,26 @@
-import React from "react";
-import ControlledEditor from "@monaco-editor/react";
-import { Col, Row } from "react-bootstrap";
-import Input from "./Input";
-import Output from "./Output";
+import React from 'react'
+import ControlledEditor from '@monaco-editor/react'
+import { Col, Row } from 'react-bootstrap'
+import Input from './Input'
+import Output from './Output'
 
 export default function Playground(prop) {
   return (
-    <div>
+    <div className="playground">
       <Row>
         <Col>
           <ControlledEditor
-            width="70vw"
-            height="100vh"
+            width='60vw'
+            height='100vh'
             defaultLanguage={prop.currentLang.code}
             defaultValue={prop.currentLang.sampleCode}
-            theme="vs-dark"
+            theme='vs-dark'
             onChange={prop.handleCode}
-            options={{ fontSize: 20 }}
+            options={{ fontSize: prop.fontSize }}
           />
         </Col>
 
-        <Col className="p-0">
+        <Col className='p-0'>
           <Row>
             <Input inputHandler={prop.handleInput} />
           </Row>
@@ -30,5 +30,5 @@ export default function Playground(prop) {
         </Col>
       </Row>
     </div>
-  );
+  )
 }

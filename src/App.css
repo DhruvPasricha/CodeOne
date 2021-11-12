@@ -10,12 +10,19 @@ body {
   color: white;
   resize: none !important;
   padding: 10px !important;
+  outline: none !important;
+  border: none !important;
+}
+
+#logo:hover {
+  color: crimson;
+  transition: 0.5s ease;
 }
 
 .input,
 .output {
-  width: 94.5% !important;
-  height: 42.5vh;
+  /* width: 100%; */
+  height: 43vh;
   background-color: #1e1e1e !important;
   padding: 0px !important;
 }
@@ -45,8 +52,13 @@ body {
 
 #name {
   color: white;
-  font-size: 17pt;
+  /* font-size: 2.7vh; */
+  font-size: calc(1vw + 1vh + 1vmin);
   font-weight: bold;
+}
+
+.playground {
+  background-color: #1e1e1e;
 }
 
 #name:hover {
@@ -61,7 +73,9 @@ body {
   font-weight: bold;
   border-radius: 40px;
   zoom: 120%;
+  /* width: 5.7vw; */
   cursor: pointer;
+  text-align: center;
 }
 
 #runButton:hover {
@@ -71,10 +85,18 @@ body {
 
 #language {
   color: white;
-  font-weight: bold;
+}
+
+#fontsize {
+  color: white;
+}
+
+#fontsize:hover {
+  color: crimson;
+  transition: 0.5s ease;
 }
 
 #language:hover {
-  color: red;
+  color: crimson;
   transition: 0.5s ease;
 }
