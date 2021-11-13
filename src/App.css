@@ -1,0 +1,21 @@
+.navBarPrefix {
+  width: 60vw;
+  display: flex;
+  align-items: center !important;
+  margin-right: 3.5vw;
+}
+
+#toggleBtn {
+  color: white;
+  background-color: #E41655;
+  border-radius: 40px;
+  width: 100px;
+}
+
+#toggleBtn:hover {
+  background-color: #0c9463;
+}
+
+#toggleBtn::selection {
+  outline-color: transparent;
+}

@@ -37,14 +37,7 @@ export function App() {
   }
 
   function handleClick(newLang, index) {
-    let temp = currentLang;
     setCurrentLang(newLang);
-    languages[index] = temp;
-    while (index > 0 && languages[index - 1].name > currentLang) {
-      languages[index] = languages[index - 1];
-      index--;
-    }
-    languages[index] = temp;
     setValue(newLang.sampleCode);
   }
 

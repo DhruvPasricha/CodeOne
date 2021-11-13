@@ -5,6 +5,7 @@ import { initialHTML, initialCSS, initialJS } from "./InitialValues";
 import { useState, useEffect } from "react";
 import ColumnResizer from "react-column-resizer";
 import "./App.css";
+import NavBar from "./NavBar";
 
 export function App() {
   const [htmlValue, setHtml] = useState(initialHTML);
@@ -30,51 +31,54 @@ export function App() {
   }, [htmlValue, cssValue, jsValue]);
 
   return (
-    <center>
-      <div className="pane top-pane">
-        <table>
-          <tbody>
-            <tr>
-              <CodeEditor
-                displayName="HTML"
-                lang="html"
-                value={htmlValue}
-                setValue={setHtml}
-              />
+    <>
+      <NavBar className="navbar p-3" />
+      <center>
+        <div className="pane top-pane">
+          <table>
+            <tbody>
+              <tr>
+                <CodeEditor
+                  displayName="HTML"
+                  lang="html"
+                  value={htmlValue}
+                  setValue={setHtml}
+                />
 
-              <ColumnResizer className="columnResizer resizer" minWidth={0} />
+                <ColumnResizer className="columnResizer resizer" minWidth={0} />
 
-              <CodeEditor
-                displayName="CSS"
-                lang="css"
-                value={cssValue}
-                setValue={setCSS}
-              />
+                <CodeEditor
+                  displayName="CSS"
+                  lang="css"
+                  value={cssValue}
+                  setValue={setCSS}
+                />
 
-              <ColumnResizer className="columnResizer resizer" minWidth={0} />
+                <ColumnResizer className="columnResizer resizer" minWidth={0} />
 
-              <CodeEditor
-                displayName="Javascript"
-                lang="javascript"
-                value={jsValue}
-                setValue={setJs}
-              />
-            </tr>
-          </tbody>
-        </table>
-      </div>
+                <CodeEditor
+                  displayName="Javascript"
+                  lang="javascript"
+                  value={jsValue}
+                  setValue={setJs}
+                />
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-      <div className="outputScreen">
-        <iframe
-          srcDoc={Code}
-          title="output"
-          width="100%"
-          height="100%"
-          frameBorder="0"
-          sandbox="allow-scripts"
-          loading="lazy"
-        ></iframe>
-      </div>
-    </center>
+        <div className="outputScreen">
+          <iframe
+            srcDoc={Code}
+            title="output"
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            sandbox="allow-scripts"
+            loading="lazy"
+          ></iframe>
+        </div>
+      </center>
+    </>
   );
 }

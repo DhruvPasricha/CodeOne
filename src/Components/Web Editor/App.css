@@ -8,14 +8,12 @@ body {
   color: white;
 }
 
-
 .top-pane {
   background-color: black;
 }
 
 .editor {
   width: 33vw;
-  min-height: 40vh;
 }
 
 .resizer {
@@ -30,10 +28,22 @@ iframe {
 
 .outputScreen {
   width: 100vw;
-  height: 41vh;
+  height: 30vh;
   border: 0px;
   background-color: #20202000;
   margin-left: 0px !important;
   margin-right: 0px !important;
   display: flex;
 }
+
+.navbar {
+  background-color: #1e1e1e;
+  justify-content: start !important;
+}
+
+#name {
+  color: white;
+  font-size: calc(1vw + 1vh + 1vmin) !important;
+  font-weight: bold !important;
+}
+

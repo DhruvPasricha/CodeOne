@@ -15,7 +15,7 @@ export default function CodeEditor(prop) {
 
         <Editor
           width="100%"
-          height="55vh"
+          height="50vh"
           defaultLanguage={lang}
           defaultValue={value}
           theme="vs-dark"

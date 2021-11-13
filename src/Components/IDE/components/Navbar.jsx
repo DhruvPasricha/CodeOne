@@ -1,17 +1,26 @@
 import React from "react";
 import { Col, NavDropdown } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlayCircle, faCode } from "@fortawesome/free-solid-svg-icons";
+import { faPlayCircle } from "@fortawesome/free-solid-svg-icons";
 import { languages } from "./Languages";
 import { sizes } from "./Size";
+import NavBarPrefix from "../../NavBarPrefix";
 
 const NavbarComp = (props) => {
+  class Language {
+    constructor(name, extension, code, sampleCode) {
+      this.name = name;
+      this.extension = extension;
+      this.code = code;
+      this.sampleCode = sampleCode;
+    }
+  }
+
   const arr = [];
 
   const fontSizes = [];
 
-  for (let i = 1; i < languages.length; i++) {
-    languages[i].name += " ";
+  for (let i = 0; i < languages.length; i++) {
     arr.push(
       <NavDropdown.Item onClick={() => props.changeLang(languages[i], i)}>
         {languages[i].name}
@@ -29,17 +38,10 @@ const NavbarComp = (props) => {
     );
   }
 
-  const logo = (
-    <FontAwesomeIcon icon={faCode} size="3x" color="white" id="logo" />
-  );
-
   return (
     <div>
       <div className="navbar p-3">
-        <div>{logo}</div>
-        <Col className="col-8">
-          <span id="name">【﻿ＣＯＤＥＯＮＥ】</span>
-        </Col>
+        <NavBarPrefix name="Web Editor" />
         <Col className="m-0 p-0">
           <div>
             <NavDropdown
