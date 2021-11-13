@@ -13,7 +13,7 @@ let initialHTML = `
 </head>
 
 <body>
-    <button>Welcome to CodePlay!</button>
+    <button>Welcome to CodeOne!</button>
 </body>
 
 </html>`;
