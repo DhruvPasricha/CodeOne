@@ -1,0 +1,39 @@
+body {
+  background-color: #202020;
+  overflow: hidden;
+}
+
+.heading {
+  background-color: #272727;
+  color: white;
+}
+
+
+.top-pane {
+  background-color: black;
+}
+
+.editor {
+  width: 33vw;
+  min-height: 40vh;
+}
+
+.resizer {
+  background-color: #272727;
+  margin-top: 5vw;
+  width: 2vw;
+}
+
+iframe {
+  border-top: 5px solid black;
+}
+
+.outputScreen {
+  width: 100vw;
+  height: 41vh;
+  border: 0px;
+  background-color: #20202000;
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+  display: flex;
+}
