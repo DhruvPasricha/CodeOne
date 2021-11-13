@@ -7,15 +7,6 @@ import { sizes } from "./Size";
 import NavBarPrefix from "../../NavBarPrefix";
 
 const NavbarComp = (props) => {
-  class Language {
-    constructor(name, extension, code, sampleCode) {
-      this.name = name;
-      this.extension = extension;
-      this.code = code;
-      this.sampleCode = sampleCode;
-    }
-  }
-
   const arr = [];
 
   const fontSizes = [];

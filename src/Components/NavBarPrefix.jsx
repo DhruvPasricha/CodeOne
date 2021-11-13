@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode, faExchangeAlt } from "@fortawesome/free-solid-svg-icons";
-import { Col, Button } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { ToggleContext } from "../App";
 
 export default function NavBarPrefix(prop) {
