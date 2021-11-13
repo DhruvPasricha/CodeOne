@@ -9,7 +9,7 @@ export default function App() {
     toggle(!Editor);
   }
 
-  if (Editor == false) {
+  if (Editor === false) {
     return (
       <div>
         {/* <button onClick={handleClick}>toggle</button> */}
