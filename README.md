@@ -17,7 +17,7 @@
 <hr>
 <!-- LINK -->
 
-### <a href="https://codeone.netlify.app">🔥 𝓛𝓲𝓿𝓮 𝓓𝓮𝓶𝓸 🔥</a>
+### <a href="https://codeone.netlify.app" target = "_blank">🔥 𝓛𝓲𝓿𝓮 𝓓𝓮𝓶𝓸 🔥</a>
 
 </div>
 
@@ -58,7 +58,7 @@
 
 ### Thanks for visiting !!! We hope the project will come in great use 💯
 
-**Do give it a star if you liked our work**✨
+### **Do give it a star if you liked our work**✨
 
 
 
