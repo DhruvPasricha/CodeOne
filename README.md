@@ -1,8 +1,8 @@
 <div align = "center">
-
+<hr>
 <img src="./public/banner_codeone.png" width="60%">
  
-<br>
+<br><br>
   
 [![](https://img.shields.io/badge/IDE-Web%20Editor-orange)](https://codeone.netlify.app/)
 [![](https://img.shields.io/badge/made%20by-Dhruv%20%26%20Rahul-blue)](https://github.com/DhruvPasricha/CodeOne)
@@ -12,7 +12,8 @@
 [![GitHub contributors](https://img.shields.io/github/contributors/DhruvPasricha/CodeOne)](https://github.com/DhruvPasricha/CodeOne/graphs/contributors)
 
 <br>
-
+ 
+<hr>
 <!-- LINK -->
 
 ### <a href="https://codeone.netlify.app">Live Demo</a>
@@ -26,7 +27,7 @@
 ***_Codeone_** is a web app built on top of React which includes an **_IDE_** supporting multiple languages for programming in addition with a highly customizable **_Web Editor_** supporting real time changes*
 
 <div align = "center">
-<img src="./public/demo.gif" width="60%">
+<img src="./public/demo.gif" width="100%">
 </div>
 <hr>
 
