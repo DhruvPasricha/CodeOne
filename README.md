@@ -17,7 +17,7 @@
 <hr>
 <!-- LINK -->
 
-### <a href="https://codeone.netlify.app">🔥 𝚅𝚒𝚎𝚠 𝙳𝚎𝚙𝚕𝚘𝚢𝚎𝚍 𝙿𝚛𝚘𝚓𝚎𝚌𝚝 🔥</a>
+### <a href="https://codeone.netlify.app">🔥 𝓛𝓲𝓿𝓮 𝓓𝓮𝓶𝓸 🔥</a>
 
 </div>
 
@@ -30,11 +30,6 @@
 <div align = "center">
 <img src="./public/demo-complete.gif" width="100%">
 
-> IDE
-<img src="./public/demo.gif" width="100%">
-
-> Web Editor
-<img src="./public/demo-web.gif" width="100%">
 </div>
 <hr>
 
