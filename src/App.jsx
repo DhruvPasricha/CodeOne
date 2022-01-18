@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import { App as Ide } from "./Components/IDE/App";
 import { App as WebEditor } from "./Components/Web Editor/App";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 export const ToggleContext = React.createContext();
 
 export default function App() {
-  const [Editor, toggle] = useState(true);
+  const [Editor, toggle] = useLocalStorage("editor", true);
 
   function handleClick() {
     toggle(!Editor);

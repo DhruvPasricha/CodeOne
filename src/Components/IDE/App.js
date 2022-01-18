@@ -6,6 +6,7 @@ import axios from "axios";
 import Playground from "./components/Playground";
 import NavbarComp from "./components/Navbar";
 import { languages } from "./components/Languages";
+import useLocalStorage from "../../hooks/useLocalStorage";
 
 export function App() {
   function comp(a, b) {
@@ -14,13 +15,16 @@ export function App() {
     return 0;
   }
   languages.sort(comp);
-  const [fontSize, setFontSize] = useState("18");
-  const [fontSizeName, setFontSizeName] = useState("Small");
+  const [fontSize, setFontSize] = useLocalStorage("font-size", "18");
+  const [fontSizeName, setFontSizeName] = useLocalStorage(
+    "font-size-name",
+    "Small"
+  );
 
-  const [currentLang, setCurrentLang] = useState(languages[0]);
-  const [value, setValue] = useState(currentLang.sampleCode);
-  const [inputData, setInputData] = useState("");
-  const [outputData, setOutputData] = useState("");
+  const [currentLang, setCurrentLang] = useLocalStorage("lang", languages[0]);
+  const [value, setValue] = useLocalStorage("code", currentLang.sampleCode);
+  const [inputData, setInputData] = useLocalStorage("input", "");
+  const [outputData, setOutputData] = useLocalStorage("output", "");
   const [running, setRunning] = useState(false);
 
   function handleChange(v, e) {
@@ -94,6 +98,8 @@ export function App() {
         handleInput={handleInput}
         output={outputData}
         fontSize={fontSize}
+        code={value}
+        input={inputData}
       />
     </div>
   );

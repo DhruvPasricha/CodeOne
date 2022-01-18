@@ -7,10 +7,12 @@ import ColumnResizer from "react-column-resizer";
 import "./App.css";
 import NavBar from "./NavBar";
 
+import useLocalStorage from "../../hooks/useLocalStorage";
+
 export function App() {
-  const [htmlValue, setHtml] = useState(initialHTML);
-  const [cssValue, setCSS] = useState(initialCSS);
-  const [jsValue, setJs] = useState(initialJS);
+  const [htmlValue, setHtml] = useLocalStorage("html", initialHTML);
+  const [cssValue, setCSS] = useLocalStorage("css", initialCSS);
+  const [jsValue, setJs] = useLocalStorage("js", initialJS);
   const [Code, setCode] = useState(`
 <html>
 <body>${htmlValue}</body>

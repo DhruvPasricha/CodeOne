@@ -13,16 +13,16 @@ export default function Playground(prop) {
             width="60vw"
             height="100vh"
             defaultLanguage={prop.currentLang.code}
-            defaultValue={prop.currentLang.sampleCode}
+            defaultValue={prop.code}
             theme="vs-dark"
-            onChange={(value)=>prop.handleCode(value)}
+            onChange={(value) => prop.handleCode(value)}
             options={{ fontSize: prop.fontSize }}
           />
         </Col>
 
         <Col className="p-0">
           <Row>
-            <Input inputHandler={prop.handleInput} />
+            <Input inputHandler={prop.handleInput} input={prop.input} />
           </Row>
           <Row>
             <Output out={prop.output} />
