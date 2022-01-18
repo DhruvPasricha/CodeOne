@@ -1,70 +1,67 @@
-# Getting Started with Create React App
+<div align = "center">
+<hr>
+<img src="./public/banner_codeone.png" width="60%">
+ 
+<br><br>
+  
+[![](https://img.shields.io/badge/IDE-Web%20Editor-orange)](https://codeone.netlify.app/)
+[![](https://img.shields.io/badge/made%20by-Dhruv%20%26%20Rahul-red)](https://github.com/DhruvPasricha/CodeOne)
+[![GitHub contributors](https://img.shields.io/github/contributors/DhruvPasricha/CodeOne)](https://github.com/DhruvPasricha/CodeOne/graphs/contributors)
+[![](https://img.shields.io/badge/React-17.0.2-green)](https://reactjs.org/ )
+[![GitHub forks](https://img.shields.io/github/forks/DhruvPasricha/CodeOne)](https://github.com/DhruvPasricha/CodeOne/network)
+[![GitHub stars](https://img.shields.io/github/stars/DhruvPasricha/CodeOne)](https://github.com/DhruvPasricha/CodeOne/stargazers)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+<br>
+ 
+<hr>
+<!-- LINK -->
 
-In the project directory, you can run:
+### <a href="https://codeone.netlify.app" target = "_blank">🔥 𝓛𝓲𝓿𝓮 𝓓𝓮𝓶𝓸 🔥</a>
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<hr>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Description
 
-### `npm test`
+***_Codeone_** is a web app built on top of React which includes an **_IDE_** supporting multiple languages for programming in addition with a highly customizable **_Web Editor_** supporting real time changes*
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<div align = "center">
+<img src="./public/demo-complete.gif" width="100%">
 
-### `npm run build`
+</div>
+<hr>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+**Languages Supported -**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> IDE :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+1. C++
+2. Python
+3. Ruby
+4. Swift
+5. Kotlin
+6. Java
+```
 
-### `npm run eject`
+> Web Editor :
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+1. HTML
+2. CSS
+3. Javascript
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<hr>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Thanks for visiting !!! We hope the project will come in great use 💯
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### **Do give it a star if you liked our work**✨
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
