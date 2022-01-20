@@ -1,6 +1,6 @@
 <div align = "center">
 <hr>
-<img src="./public/banner_codeone.png" width="60%">
+<img src="./frontend/public/banner_codeone.png" width="60%">
  
 <br><br>
   

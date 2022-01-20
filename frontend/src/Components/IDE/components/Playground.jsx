@@ -4,20 +4,24 @@ import { Col, Row } from 'react-bootstrap'
 import Input from './Input'
 import Output from './Output'
 import useLocalStorage from '../../../hooks/useLocalStorage'
+import { useState } from 'react'
 
 export default function Playground(prop) {
-  useEffect(() => {
-    if (prop.sockets == null) return
-    prop.sockets.on('receive-playground', (val) => {
-      console.log("hell");      
-      prop.handleCode(val)
-    })
-  }, [prop.sockets, prop.code])
+  const [currentCode, setCurrentCode] = useState()  // here we the value which is on the editor be it empty
 
   useEffect(() => {
     if (prop.sockets == null) return
     prop.sockets.emit('send-playground', prop.code)
   }, [prop.sockets, prop.code])
+
+  useEffect(() => {
+    if (prop.sockets == null) return
+    prop.sockets.on('receive-playground', (val) => {
+      console.log('recieve')
+      // prop.handleCode(val)
+      setCurrentCode(val)
+    })
+  }, [prop.sockets])
 
   return (
     <div className='playground'>
@@ -27,7 +31,7 @@ export default function Playground(prop) {
             width='60vw'
             height='100vh'
             defaultLanguage={prop.currentLang.code}
-            value={prop.code}
+            value={currentCode}
             // defaultValue={prop.code}
             theme='vs-dark'
             // onMount={(monaco) => {
