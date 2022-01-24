@@ -7,7 +7,7 @@ import useLocalStorage from '../../../hooks/useLocalStorage'
 import { useState } from 'react'
 
 export default function Playground(prop) {
-  const [currentCode, setCurrentCode] = useState()  // here we the value which is on the editor be it empty
+  const [currentCode, setCurrentCode] = useState() // here we the value which is on the editor be it empty
 
   useEffect(() => {
     if (prop.sockets == null) return

@@ -3,6 +3,7 @@ import { App as Ide } from './Components/IDE/App'
 import { App as WebEditor } from './Components/Web Editor/App'
 import useLocalStorage from './hooks/useLocalStorage'
 import { io } from 'socket.io-client'
+import { useParams } from 'react-router-dom'
 
 export const ToggleContext = React.createContext()
 
@@ -12,6 +13,9 @@ export default function App() {
 
   const [socketIO, setSocket] = useState()
 
+  const { id: collabId } = useParams()
+  console.log(collabId)
+
   useEffect(() => {
     const connector = io('http://localhost:4545')
     setSocket(connector)
@@ -20,6 +24,15 @@ export default function App() {
       connector.disconnect()
     }
   }, [])
+
+  useEffect(() => {
+    if (socketIO == null) return
+
+    // TODO
+    // socketIO.once('load-session',)
+
+    socketIO.emit('get-session',collabId)
+  }, [socketIO, collabId])
 
   useEffect(() => {
     if (socketIO == null) return

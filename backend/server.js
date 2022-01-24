@@ -6,10 +6,13 @@ const io = require('socket.io')(4545, {
 })
 
 io.on('connection', (socket) => {
-  socket.on('toggleEditor', (editor) => {
-    socket.broadcast.emit('currentEditor', editor)
-    socket.on('send-playground', (change) => {
-      socket.broadcast.emit('receive-playground', change)
+  socket.on('get-session', (collabId) => {
+    socket.join(collabId)
+    socket.on('toggleEditor', (editor) => {
+      socket.broadcast.to(collabId).emit('currentEditor', editor)
+      socket.on('send-playground', (change) => {
+        socket.broadcast.to(collabId).emit('receive-playground', change)
+      })
     })
   })
 })

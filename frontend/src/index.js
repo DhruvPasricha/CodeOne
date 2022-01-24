@@ -12,8 +12,8 @@ import { v4 as uuidV4 } from 'uuid'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
-    {/* <Router>
+    {/* <App /> */}
+    <Router>
       <Switch>
         <Route path='/' exact>
           <Redirect to={`/collab/${uuidV4()}`} />
@@ -23,7 +23,7 @@ ReactDOM.render(
           <App />
         </Route>
       </Switch>
-    </Router> */}
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 )
