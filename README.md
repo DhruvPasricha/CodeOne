@@ -28,7 +28,7 @@
 ***_Codeone_** is a web app built on top of React which includes an **_IDE_** supporting multiple languages for programming in addition with a highly customizable **_Web Editor_** supporting real time changes*
 
 <div align = "center">
-<img src="./public/demo-complete.gif" width="100%">
+<img src="./frontend//public/demo-complete.gif" width="100%">
 
 </div>
 <hr>
