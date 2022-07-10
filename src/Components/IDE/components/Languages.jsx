@@ -1,16 +1,16 @@
 class Language {
   constructor(name, extension, code, sampleCode) {
-    this.name = name;
-    this.extension = extension;
-    this.code = code;
-    this.sampleCode = sampleCode;
+    this.name = name
+    this.extension = extension
+    this.code = code
+    this.sampleCode = sampleCode
   }
 }
 
 let cpp = new Language(
-  "C++",
-  "cpp",
-  "cpp",
+  'C++',
+  'cpp17',
+  'cpp',
   `#include<iostream>
 using namespace std;
 
@@ -18,14 +18,14 @@ int main(){
     cout << "Hello World";
     return 0;
 }`
-);
+)
 
-let python = new Language("Python", "py", "python", `print("Hello World")`);
+let python = new Language('Python', 'python3', 'python', `print("Hello World")`)
 
 let java = new Language(
-  "Java",
-  "java",
-  "java",
+  'Java',
+  'java',
+  'java',
   `public class Main {
       
     public static void main(String[] args) {
@@ -33,19 +33,19 @@ let java = new Language(
     }
     
 }`
-);
+)
 
-let ruby = new Language("Ruby", "rb", "ruby", `puts "Hello World"`);
+let ruby = new Language('Ruby', 'ruby', 'ruby', `puts "Hello World"`)
 
-let swift = new Language("Swift", "swift", "swift", `print("Hello, World!") `);
+let swift = new Language('Swift', 'swift', 'swift', `print("Hello, World!") `)
 
 let kotlin = new Language(
-  "Kotlin",
-  "kt",
-  "kotlin",
+  'Kotlin',
+  'kotlin',
+  'kotlin',
   `fun main(args: Array<String>) {
     println("Hello, World!")
 }`
-);
+)
 
-export const languages = [cpp, python, java, ruby, kotlin, swift];
+export const languages = [cpp, python, java, ruby, kotlin, swift]

@@ -52,30 +52,31 @@ export function App() {
     console.log(value)
     console.log(inputData)
 
-    var data = qs.stringify({
-      code: value,
+    var data = JSON.stringify({
+      script: value,
       language: currentLang.extension,
-      input: inputData,
+      stdin: inputData,
+      clientId: 'c6a7f53e105f6b7dae4289447f6ac0f4',
+      clientSecret:
+        '8de5f33a73ab5ae3766e93fca45939507a91209d30e75268fc3183ec59d321f1',
     })
 
-    var config = {
-      method: 'post',
-      url: 'https://codex-api.herokuapp.com/',
-      headers: {
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-      data: data,
-    }
-
-    axios(config)
+    axios
+      .post('/v1/execute', data, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Credentials': '*',
+        },
+      })
       .then(function (response) {
         setRunning(false)
         setOutputData(response.data.output)
-        console.log(response.data.output);
+        console.log(response.data.output)
       })
       .catch(function (error) {
         setRunning(false)
-        console.log(error);
+        console.log(error)
         setOutputData(error)
       })
   }
