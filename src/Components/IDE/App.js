@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
+import qs from 'qs'
 
 import Playground from './components/Playground'
 import NavbarComp from './components/Navbar'
@@ -51,33 +52,53 @@ export function App() {
     console.log(value)
     console.log(inputData)
 
-    var data = JSON.stringify({
-      script: value,
+    var data = qs.stringify({
+      code: value,
       language: currentLang.extension,
-      stdin: inputData,
-      clientId: 'c6a7f53e105f6b7dae4289447f6ac0f4',
-      clientSecret:
-        '8de5f33a73ab5ae3766e93fca45939507a91209d30e75268fc3183ec59d321f1',
+      input: inputData,
     })
 
-    axios
-      .post('/v1/execute', data, {
-        headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Credentials': '*',
-        },
-      })
+    var config = {
+      method: 'post',
+      url: 'https://codex-api.herokuapp.com/',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      data: data,
+    }
+
+    axios(config)
       .then(function (response) {
         setRunning(false)
-        setOutputData(response.data.output)
+        if (response.data.output) {
+          setOutputData(response.data.output)
+        } else setOutputData(response.data.error)
         console.log(response.data.output)
       })
       .catch(function (error) {
         setRunning(false)
         console.log(error)
-        setOutputData(error)
+        // if (error != null) {
+        //   setOutputData(error)
+        // }
       })
+
+    // axios
+    //   .post('https://codex-api.herokuapp.com/', data, {
+    //     headers: {
+    //       'Content-Type': 'application/x-www-form-urlencoded',
+    //     },
+    //   })
+    //   .then(function (response) {
+    //     setRunning(false)
+    //     // setOutputData(response.data.output)
+    //     console.log(response.data.output)
+    //   })
+    //   .catch(function (error) {
+    //     setRunning(false)
+    //     console.log(error)
+    //     // setOutputData(error)
+    //   })
   }
 
   return (

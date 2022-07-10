@@ -9,7 +9,7 @@ class Language {
 
 let cpp = new Language(
   'C++',
-  'cpp17',
+  'cpp',
   'cpp',
   `#include<iostream>
 using namespace std;
@@ -20,7 +20,7 @@ int main(){
 }`
 )
 
-let python = new Language('Python', 'python3', 'python', `print("Hello World")`)
+let python = new Language('Python', 'py', 'python', `print("Hello World")`)
 
 let java = new Language(
   'Java',
@@ -35,17 +35,17 @@ let java = new Language(
 }`
 )
 
-let ruby = new Language('Ruby', 'ruby', 'ruby', `puts "Hello World"`)
+let ruby = new Language('Ruby', 'rb', 'ruby', `puts "Hello World"`)
 
 let swift = new Language('Swift', 'swift', 'swift', `print("Hello, World!") `)
 
 let kotlin = new Language(
   'Kotlin',
-  'kotlin',
+  'kt',
   'kotlin',
   `fun main(args: Array<String>) {
     println("Hello, World!")
 }`
 )
 
-export const languages = [cpp, python, java, ruby, kotlin, swift]
+export const languages = [cpp, python, java]
