@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios'
-import qs from 'qs'
 
 import Playground from './components/Playground'
 import NavbarComp from './components/Navbar'
