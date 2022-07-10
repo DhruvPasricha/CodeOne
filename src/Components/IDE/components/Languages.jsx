@@ -35,17 +35,17 @@ let java = new Language(
 }`
 )
 
-let ruby = new Language('Ruby', 'rb', 'ruby', `puts "Hello World"`)
+// let ruby = new Language('Ruby', 'rb', 'ruby', `puts "Hello World"`)
 
-let swift = new Language('Swift', 'swift', 'swift', `print("Hello, World!") `)
+// let swift = new Language('Swift', 'swift', 'swift', `print("Hello, World!") `)
 
-let kotlin = new Language(
-  'Kotlin',
-  'kt',
-  'kotlin',
-  `fun main(args: Array<String>) {
-    println("Hello, World!")
-}`
-)
+// let kotlin = new Language(
+//   'Kotlin',
+//   'kt',
+//   'kotlin',
+//   `fun main(args: Array<String>) {
+//     println("Hello, World!")
+// }`
+// )
 
 export const languages = [cpp, python, java]
