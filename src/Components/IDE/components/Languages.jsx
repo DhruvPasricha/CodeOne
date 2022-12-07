@@ -1,39 +1,39 @@
 class Language {
-  constructor(name, extension, code, sampleCode) {
-    this.name = name
-    this.extension = extension
-    this.code = code
-    this.sampleCode = sampleCode
-  }
+    constructor(name, id, code, sampleCode) {
+        this.name = name;
+        this.id = id;
+        this.code = code;
+        this.sampleCode = sampleCode;
+    }
 }
 
 let cpp = new Language(
-  'C++',
-  'cpp',
-  'cpp',
-  `#include<iostream>
+    'C++',
+    54,
+    'cpp',
+    `#include<iostream>
 using namespace std;
 
 int main(){
     cout << "Hello World";
     return 0;
 }`
-)
+);
 
-let python = new Language('Python', 'py', 'python', `print("Hello World")`)
+let python = new Language('Python', 71, 'python', `print("Hello World")`);
 
 let java = new Language(
-  'Java',
-  'java',
-  'java',
-  `public class Main {
+    'Java',
+    62,
+    'java',
+    `public class Main {
       
     public static void main(String[] args) {
         System.out.println("Hello, World!"); 
     }
     
 }`
-)
+);
 
 // let ruby = new Language('Ruby', 'rb', 'ruby', `puts "Hello World"`)
 
@@ -48,4 +48,4 @@ let java = new Language(
 // }`
 // )
 
-export const languages = [cpp, python, java]
+export const languages = [cpp, python, java];
