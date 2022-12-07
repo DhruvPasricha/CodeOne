@@ -47,11 +47,9 @@ export function App() {
             'X-RapidAPI-Key': process.env.REACT_APP_COMPILER_API_KEY,
             'X-RapidAPI-Host': 'judge0-ce.p.rapidapi.com',
         };
-        console.log(headers);
+
         setOutputData('');
         setRunning(true);
-        console.log(value);
-        console.log(inputData);
 
         const url = 'https://judge0-ce.p.rapidapi.com/submissions';
 
