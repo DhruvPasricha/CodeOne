@@ -15,8 +15,8 @@ export function App() {
         return 0;
     }
     languages.sort(comp);
-    const [fontSize, setFontSize] = useLocalStorage('font-size', '18');
-    const [fontSizeName, setFontSizeName] = useLocalStorage('font-size-name', 'Small');
+    const [fontSize, setFontSize] = useLocalStorage('font-size', '17');
+    const [fontSizeName, setFontSizeName] = useLocalStorage('font-size-name', 'Medium');
 
     const [currentLang, setCurrentLang] = useLocalStorage('lang', languages[0]);
     const [value, setValue] = useLocalStorage('code', currentLang.sampleCode);

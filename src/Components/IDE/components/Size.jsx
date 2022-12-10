@@ -5,8 +5,8 @@ class Size {
   }
 }
 
-let small = new Size('Small', 18)
-let medium = new Size('Medium', 22)
-let large = new Size('Large', 26)
+let small = new Size('Small', 14)
+let medium = new Size('Medium', 17)
+let large = new Size('Large', 20)
 
 export let sizes = [small, medium, large]
