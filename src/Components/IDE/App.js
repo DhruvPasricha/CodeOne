@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
@@ -18,28 +18,19 @@ export function App() {
     const [fontSize, setFontSize] = useLocalStorage('font-size', '17');
     const [fontSizeName, setFontSizeName] = useLocalStorage('font-size-name', 'Medium');
 
-    const [currentLang, setCurrentLang] = useLocalStorage('lang', languages[0]);
-    const [value, setValue] = useLocalStorage('code', currentLang.sampleCode);
+    const [currentLang, setCurrentLang] = useLocalStorage('current-lang', languages[0]);
+    const [value, setValue] = useState(null);
     const [inputData, setInputData] = useLocalStorage('input', '');
     const [outputData, setOutputData] = useState('');
     const [running, setRunning] = useState(false);
-
-    function handleChange(v, e) {
-        setValue(v);
-    }
-
-    function handleInput(inp) {
-        setInputData(inp);
-    }
 
     function changeFontSize(newFontSize, newFontSizeName) {
         setFontSize(newFontSize);
         setFontSizeName(newFontSizeName);
     }
 
-    function handleClick(newLang, index) {
+    function handleClick(newLang) {
         setCurrentLang(newLang);
-        setValue(newLang.sampleCode);
     }
 
     const getOutput = async () => {
@@ -103,8 +94,24 @@ export function App() {
 
     return (
         <div>
-            <NavbarComp changeFontSize={changeFontSize} changeLang={handleClick} currentLang={currentLang} key={currentLang.code} execute={getOutput} loading={running} fontSize={fontSize} fontSizeName={fontSizeName} />
-            <Playground currentLang={currentLang} key={currentLang.name} handleCode={handleChange} handleInput={handleInput} output={outputData} fontSize={fontSize} code={value} input={inputData} />
+            <NavbarComp 
+                changeFontSize={changeFontSize}
+                changeLang={handleClick}
+                currentLang={currentLang}
+                key={currentLang.code}
+                execute={getOutput}
+                loading={running}
+                fontSize={fontSize}
+                fontSizeName={fontSizeName} 
+            />
+            <Playground 
+                currentLang={currentLang} 
+                key={currentLang.name}
+                output={outputData}
+                fontSize={fontSize}
+                updateCodeValue={setValue}
+                updateInputValue={setInputData}
+            />
         </div>
     );
 }
