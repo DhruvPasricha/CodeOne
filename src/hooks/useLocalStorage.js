@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const PREFIX = 'codeone'
+const PREFIX = 'CODEONE-'
 
 export default function useLocalStorage(key, initialValue) {
   const prefixedKey = PREFIX + key
