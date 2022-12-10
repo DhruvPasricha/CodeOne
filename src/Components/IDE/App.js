@@ -21,7 +21,7 @@ export function App() {
     const [currentLang, setCurrentLang] = useLocalStorage('lang', languages[0]);
     const [value, setValue] = useLocalStorage('code', currentLang.sampleCode);
     const [inputData, setInputData] = useLocalStorage('input', '');
-    const [outputData, setOutputData] = useLocalStorage('output', '');
+    const [outputData, setOutputData] = useState('');
     const [running, setRunning] = useState(false);
 
     function handleChange(v, e) {
