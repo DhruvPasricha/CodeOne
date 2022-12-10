@@ -57,7 +57,7 @@ export function App() {
             const data = {
                 source_code: value,
                 language_id: currentLang.id,
-                std_in: inputData,
+                stdin: inputData,
             };
 
             const options = {
